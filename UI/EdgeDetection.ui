@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Edge Detection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icons/001-code.png</normaloff>Icons/001-code.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(34, 34, 51);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_DetectEdges">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_DetectEdges{
+background-color: rgb(78, 78, 117);
+font: 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border:none;
+border-radius:15px;
+}
+QPushButton:pressed#btn_DetectEdges{
+background-color: #434a53;
+}</string>
+    </property>
+    <property name="text">
+     <string>Detect edges</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/005-conversion.png</normaloff>../Icons/005-conversion.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_SaveImg">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>450</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_SaveImg{
+background-color: rgb(78, 78, 117);
+font: 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border:none;
+border-radius:15px;
+}
+QPushButton:pressed#btn_SaveImg{
+background-color: #434a53;
+}</string>
+    </property>
+    <property name="text">
+     <string>Save new iamge</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/003-double-check.png</normaloff>../Icons/003-double-check.png</iconset>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>681</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="img_OriginaImage">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="img_NewImage">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>5</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(170, 204, 255);</string>
+    </property>
+    <property name="text">
+     <string>New Image</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>55</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(170, 204, 255);</string>
+    </property>
+    <property name="text">
+     <string>Image</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(85, 85, 127);
+background-color: rgb(85, 85, 127);
+border-bottom:1px solid;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <widget class="QMenu" name="menuSelect_Image">
+    <property name="styleSheet">
+     <string notr="true">#menuSelect_Image{
+background-color: rgb(78, 78, 117);
+color: rgb(255, 255, 255);
+font: 8pt &quot;Segoe UI&quot;;
+}
+QMenu:pressed#menuSelect_Image{
+background-color: rgb(100, 100, 149);
+}</string>
+    </property>
+    <property name="title">
+     <string notr="true">File</string>
+    </property>
+    <addaction name="btn_OpenImage"/>
+    <addaction name="separator"/>
+    <addaction name="btn_About"/>
+   </widget>
+   <addaction name="menuSelect_Image"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="btn_OpenImage">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Icons/006-copywriting.png</normaloff>../Icons/006-copywriting.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Image</string>
+   </property>
+  </action>
+  <action name="btn_About">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Icons/004-about.png</normaloff>../Icons/004-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
