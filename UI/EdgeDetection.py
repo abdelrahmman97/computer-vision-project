@@ -215,7 +215,7 @@ class Ui_MainWindow(object):
         if "." not in fileName[0]:
             fileName[0] += ".png"
             self.fileName = fileName[0]
-            detectEdges.saveImg(detectEdges,self.fileName)
+            detectEdges.saveImg('tmp_new.png', self.fileName)
             self.statusbar.showMessage('Image saved')
         else:
             self.fileName = fileName[0]
